@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semangat, Sayang!</title>
+    <style>
+        /* Mengatur gaya umum untuk halaman */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #fce4ec;
+            color: #6a1b9a;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            flex-direction: column;
+        }
+
+        h1 {
+            font-size: 50px;
+            color: #8e24aa;
+            margin-top: 0;
+        }
+
+        .message {
+            font-size: 22px;
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #fff;
+            border-radius: 15px;
+            width: 80%;
+            max-width: 600px;
+            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+            color: #4a148c;
+        }
+
+        .button {
+            background-color: #8e24aa;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            margin-top: 30px;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #6a1b9a;
+        }
+
+        .footer {
+            position: absolute;
+            bottom: 20px;
+            font-size: 14px;
+            color: #6a1b9a;
+        }
+
+        /* Responsif */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 36px;
+            }
+            .message {
+                font-size: 18px;
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Semangat, Sayang gabolee nyeraa</h1>
+    <div class="message" id="motivasiMessage">
+        "cemangat cayanggg acuuu"
+    </div>
+
+    <button class="button" onclick="tampilkanPesan()">Pencet tombol inii yaa oktaaa</button>
+
+    <div class="footer">
+        BY hiro/royce
+    </div>
+
+    <script>
+        // Array berisi pesan motivasi
+        const pesanMotivasi = [
+            "Ciee pasti cape yaa ngerjain tugas kuliah, semangat yaaa maaf aku tidak bisa bantu apa-apa 😘",
+            "Semangat terus ya, sayang! Kamu pasti bisa menyelesaikan semua tantangan ini! ❤️",
+            "Aku bangga banget sama kamu, tetap semangat ya! 💪",
+            "Jangan lupa istirahat kalau capek, aku selalu ada buat kamu! 🥰",
+            "Hari ini mungkin berat, tapi aku tahu kamu kuat! 💜"
+        ];
+
+        // Fungsi untuk mengganti pesan motivasi secara acak
+        function tampilkanPesan() {
+            const randomIndex = Math.floor(Math.random() * pesanMotivasi.length);
+            document.getElementById('motivasiMessage').innerText = pesanMotivasi[randomIndex];
+        }
+    </script>
+
+</body>
+</html>
